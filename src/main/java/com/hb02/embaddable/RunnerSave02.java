@@ -21,7 +21,7 @@ public class RunnerSave02
         student2.setId(2);
         student2.setName("esra");
         student2.setGrade(100);
-        student1.setAddress(new Address("Boncuk Street", "Amsterdam", "DE", "01-9921"));
+        student2.setAddress(new Address("Boncuk Street", "Amsterdam", "DE", "01-9921"));
 
         Configuration configuration = new Configuration().
                 configure("hibernate.cfg.xml").

@@ -52,6 +52,9 @@ public class Address
                 '}';
     }
 
+    public Address()
+    {
+    }
 
     public Address(String street, String city, String country, String zipCode) {
         this.street = street;
