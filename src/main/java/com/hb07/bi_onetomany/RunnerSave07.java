@@ -20,11 +20,6 @@ public class RunnerSave07
         student2.setName("Esra");
         student2.setGrade(200);
 
-        Student07 student3 = new Student07();
-        student3.setId(103L);
-        student3.setName("Boncuk");
-        student3.setGrade(10);
-
 
 
         Book07 book1 = new Book07();
@@ -53,7 +48,6 @@ public class RunnerSave07
 
         session.save(student1);
         session.save(student2);
-        session.save(student3);
 
         session.save(book1);
         session.save(book2);

@@ -51,12 +51,24 @@ public class RunnerFetch07
         //int deletedROWCount = session.createSQLQuery(sqlQuery2).executeUpdate();
         //System.out.println(deletedROWCount);
 
-        String hql2 = "DELETE FROM Student07";
+        /*
+        String hql2 = "DELETE FROM Book07";
         int deletedRowCountHql = session.createQuery(hql2).executeUpdate();
         System.out.println("deleted row count for hql: " + deletedRowCountHql);
+         */
 
+        String hql2 = "SELECT s FROM Student07 s JOIN s.bookList b WHERE b.name LIKE '%Java%'";
+        List<Student07> studentlist = session.createQuery(hql2, Student07.class).getResultList();
+        for (Student07 stu: studentlist)
+        {
+            System.out.println(stu);
+        }
+
+        //write an HQL query which will bring students whose book name contains the word java
         transaction.commit();
         session.close();
         sessionFactory.close();
+
+
     }
 }
