@@ -82,7 +82,7 @@ public class RunnerFetch11
         }
 
 
-        //get the students whose frade are biggen than 80
+        //get the students whose grade are bigger than 80
 
         criteriaQuery.select(root)
                         .where(criteriaBuilder.greaterThan(root.get("grade"), 80));
